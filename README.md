@@ -17,10 +17,8 @@
 
 - **Frontend**: React, SCSS for styling
 - **Backend**: Node.js, Express
-- **Database**: MongoDB with Prisma ORM
+- **Database**: MongoDB 
 - **Authentication**: Secure user authentication and authorization
-- **Deployment**: Hosted on [Platform Name] (e.g., Vercel/Render/Heroku)
-- **Other Tools**: Web3Forms for form handling
 
 ---
 
