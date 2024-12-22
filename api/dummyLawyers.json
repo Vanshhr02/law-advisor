@@ -1,0 +1,693 @@
+[
+  {
+    "name": "Anay Ahluwalia",
+    "rating": 5,
+    "speciality": [
+      "Corporate",
+      "Consumer Protection",
+      "Labor"
+    ],
+    "contact": "+91-9876543210",
+    "description": "Expert in corporate legal matters with over 20 years of experience in Supreme Court cases."
+  },
+  {
+    "name": "Arnav Dubey",
+    "rating": 2,
+    "speciality": [
+      "Criminal",
+      "Tax",
+      "Intellectual Property"
+    ],
+    "contact": "+91-8765432109",
+    "description": "Specializes in criminal and intellectual property law with a focus on small businesses."
+  },
+  {
+    "name": "Lavanya Lalla",
+    "rating": 5,
+    "speciality": [
+      "Civil",
+      "Human Rights",
+      "Family"
+    ],
+    "contact": "+91-7654321098",
+    "description": "Highly skilled in human rights and family law, providing compassionate and thorough service."
+  },
+  {
+    "name": "Armaan Khosla",
+    "rating": 2,
+    "speciality": [
+      "Real Estate",
+      "Media",
+      "Entertainment",
+      "Constitutional"
+    ],
+    "contact": "+91-6543210987",
+    "description": "Handles real estate and media law cases with a practical approach to resolving disputes."
+  },
+  {
+    "name": "Advik Chaudry",
+    "rating": 2,
+    "speciality": [
+      "Human Rights",
+      "Constitutional"
+    ],
+    "contact": "+91-5432109876",
+    "description": "Dedicated to protecting human rights and constitutional principles with precision."
+  },
+  {
+    "name": "Urvi Bedi",
+    "rating": 2,
+    "speciality": [
+      "Medical",
+      "Constitutional",
+      "Immigration"
+    ],
+    "contact": "+91-4321098765",
+    "description": "Immigration and constitutional law specialist, assisting small businesses effectively."
+  },
+  {
+    "name": "Rania Bansal",
+    "rating": 4,
+    "speciality": [
+      "Media",
+      "Entertainment",
+      "Labor",
+      "Civil"
+    ],
+    "contact": "+91-3210987654",
+    "description": "Known for expertise in media law and civil disputes with a high client satisfaction rate."
+  },
+  {
+    "name": "Siddharth Jain",
+    "rating": 3,
+    "speciality": [
+      "Corporate",
+      "Tax"
+    ],
+    "contact": "+91-2109876543",
+    "description": "Provides tailored legal solutions for corporate clients, focusing on tax compliance."
+  },
+  {
+    "name": "Pooja Verma",
+    "rating": 4.5,
+    "speciality": [
+      "Family",
+      "Property"
+    ],
+    "contact": "+91-1098765432",
+    "description": "Experienced in family and property law, ensuring seamless legal proceedings."
+  },
+  {
+    "name": "Rahul Kapoor",
+    "rating": 4.2,
+    "speciality": [
+      "Criminal",
+      "Civil"
+    ],
+    "contact": "+91-1234567890",
+    "description": "Passionate about representing clients in criminal and civil litigation."
+  },
+  {
+    "name": "Tanya Sharma",
+    "rating": 3.8,
+    "speciality": [
+      "Human Rights",
+      "Labor"
+    ],
+    "contact": "+91-1234509876",
+    "description": "Advocate for human rights with a focus on labor disputes and workplace rights."
+  },
+  {
+    "name": "Akshay Mehta",
+    "rating": 4.7,
+    "speciality": [
+      "Consumer Protection",
+      "Medical"
+    ],
+    "contact": "+91-9876504321",
+    "description": "Champion for consumer rights, especially in medical malpractice cases."
+  },
+  {
+    "name": "Divya Khanna",
+    "rating": 4.9,
+    "speciality": [
+      "Intellectual Property",
+      "Corporate"
+    ],
+    "contact": "+91-7894561230",
+    "description": "Intellectual property law specialist with significant corporate experience."
+  },
+  {
+    "name": "Manish Roy",
+    "rating": 4,
+    "speciality": [
+      "Tax",
+      "Constitutional"
+    ],
+    "contact": "+91-8529637410",
+    "description": "Provides expert advice on tax-related legal matters and constitutional law."
+  },
+  {
+    "name": "Nisha Gupta",
+    "rating": 5,
+    "speciality": [
+      "Immigration",
+      "Labor"
+    ],
+    "contact": "+91-9638527410",
+    "description": "Dedicated to helping clients with immigration laws and labor rights advocacy."
+  },
+  {
+    "name": "Amitabh Kulkarni",
+    "rating": 4.5,
+    "speciality": [
+      "Entertainment",
+      "Criminal"
+    ],
+    "contact": "+91-7418529630",
+    "description": "Known for resolving legal disputes in entertainment and criminal cases."
+  },
+  {
+    "name": "Sneha Nair",
+    "rating": 3.7,
+    "speciality": [
+      "Civil",
+      "Medical"
+    ],
+    "contact": "+91-6307418529",
+    "description": "Specializes in civil disputes and medical negligence cases."
+  },
+  {
+    "name": "Kabir Chatterjee",
+    "rating": 4.8,
+    "speciality": [
+      "Real Estate",
+      "Tax"
+    ],
+    "contact": "+91-1597534862",
+    "description": "Provides strategic legal solutions for real estate and tax issues."
+  },
+  {
+    "name": "Maya Desai",
+    "rating": 5,
+    "speciality": [
+      "Corporate",
+      "Human Rights"
+    ],
+    "contact": "+91-3579514862",
+    "description": "Fights for corporate accountability and human rights protections."
+  },
+  {
+    "name": "Arjun Singh",
+    "rating": 4.3,
+    "speciality": [
+      "Labor",
+      "Immigration"
+    ],
+    "contact": "+91-4567891230",
+    "description": "Helps workers and immigrants navigate complex legal challenges."
+  },
+  {
+    "name": "Anay Ahluwalia",
+    "rating": 5,
+    "speciality": [
+      "Corporate",
+      "Consumer Protection",
+      "Labor"
+    ],
+    "contact": "+91-9876543210",
+    "description": "Expert in corporate legal matters with over 20 years of experience in Supreme Court cases."
+  },
+  {
+    "name": "Arnav Dubey",
+    "rating": 2,
+    "speciality": [
+      "Criminal",
+      "Tax",
+      "Intellectual Property"
+    ],
+    "contact": "+91-8765432109",
+    "description": "Specializes in criminal and intellectual property law with a focus on small businesses."
+  },
+  {
+    "name": "Lavanya Lalla",
+    "rating": 5,
+    "speciality": [
+      "Civil",
+      "Human Rights",
+      "Family"
+    ],
+    "contact": "+91-7654321098",
+    "description": "Highly skilled in human rights and family law, providing compassionate and thorough service."
+  },
+  {
+    "name": "Armaan Khosla",
+    "rating": 2,
+    "speciality": [
+      "Real Estate",
+      "Media",
+      "Entertainment",
+      "Constitutional"
+    ],
+    "contact": "+91-6543210987",
+    "description": "Handles real estate and media law cases with a practical approach to resolving disputes."
+  },
+  {
+    "name": "Advik Chaudry",
+    "rating": 2,
+    "speciality": [
+      "Human Rights",
+      "Constitutional"
+    ],
+    "contact": "+91-5432109876",
+    "description": "Dedicated to protecting human rights and constitutional principles with precision."
+  },
+  {
+    "name": "Urvi Bedi",
+    "rating": 2,
+    "speciality": [
+      "Medical",
+      "Constitutional",
+      "Immigration"
+    ],
+    "contact": "+91-4321098765",
+    "description": "Immigration and constitutional law specialist, assisting small businesses effectively."
+  },
+  {
+    "name": "Rania Bansal",
+    "rating": 4,
+    "speciality": [
+      "Media",
+      "Entertainment",
+      "Labor",
+      "Civil"
+    ],
+    "contact": "+91-3210987654",
+    "description": "Known for expertise in media law and civil disputes with a high client satisfaction rate."
+  },
+  {
+    "name": "Siddharth Jain",
+    "rating": 3,
+    "speciality": [
+      "Corporate",
+      "Tax"
+    ],
+    "contact": "+91-2109876543",
+    "description": "Provides tailored legal solutions for corporate clients, focusing on tax compliance."
+  },
+  {
+    "name": "Pooja Verma",
+    "rating": 4.5,
+    "speciality": [
+      "Family",
+      "Property"
+    ],
+    "contact": "+91-1098765432",
+    "description": "Experienced in family and property law, ensuring seamless legal proceedings."
+  },
+  {
+    "name": "Rahul Kapoor",
+    "rating": 4.2,
+    "speciality": [
+      "Criminal",
+      "Civil"
+    ],
+    "contact": "+91-1234567890",
+    "description": "Passionate about representing clients in criminal and civil litigation."
+  },
+  {
+    "name": "Tanya Sharma",
+    "rating": 3.8,
+    "speciality": [
+      "Human Rights",
+      "Labor"
+    ],
+    "contact": "+91-1234509876",
+    "description": "Advocate for human rights with a focus on labor disputes and workplace rights."
+  },
+  {
+    "name": "Akshay Mehta",
+    "rating": 4.7,
+    "speciality": [
+      "Consumer Protection",
+      "Medical"
+    ],
+    "contact": "+91-9876504321",
+    "description": "Champion for consumer rights, especially in medical malpractice cases."
+  },
+  {
+    "name": "Divya Khanna",
+    "rating": 4.9,
+    "speciality": [
+      "Intellectual Property",
+      "Corporate"
+    ],
+    "contact": "+91-7894561230",
+    "description": "Intellectual property law specialist with significant corporate experience."
+  },
+  {
+    "name": "Manish Roy",
+    "rating": 4,
+    "speciality": [
+      "Tax",
+      "Constitutional"
+    ],
+    "contact": "+91-8529637410",
+    "description": "Provides expert advice on tax-related legal matters and constitutional law."
+  },
+  {
+    "name": "Nisha Gupta",
+    "rating": 5,
+    "speciality": [
+      "Immigration",
+      "Labor"
+    ],
+    "contact": "+91-9638527410",
+    "description": "Dedicated to helping clients with immigration laws and labor rights advocacy."
+  },
+  {
+    "name": "Amitabh Kulkarni",
+    "rating": 4.5,
+    "speciality": [
+      "Entertainment",
+      "Criminal"
+    ],
+    "contact": "+91-7418529630",
+    "description": "Known for resolving legal disputes in entertainment and criminal cases."
+  },
+  {
+    "name": "Sneha Nair",
+    "rating": 3.7,
+    "speciality": [
+      "Civil",
+      "Medical"
+    ],
+    "contact": "+91-6307418529",
+    "description": "Specializes in civil disputes and medical negligence cases."
+  },
+  {
+    "name": "Kabir Chatterjee",
+    "rating": 4.8,
+    "speciality": [
+      "Real Estate",
+      "Tax"
+    ],
+    "contact": "+91-1597534862",
+    "description": "Provides strategic legal solutions for real estate and tax issues."
+  },
+  {
+    "name": "Maya Desai",
+    "rating": 5,
+    "speciality": [
+      "Corporate",
+      "Human Rights"
+    ],
+    "contact": "+91-3579514862",
+    "description": "Fights for corporate accountability and human rights protections."
+  },
+  {
+    "name": "Arjun Singh",
+    "rating": 4.3,
+    "speciality": [
+      "Labor",
+      "Immigration"
+    ],
+    "contact": "+91-4567891230",
+    "description": "Helps workers and immigrants navigate complex legal challenges."
+  },
+  {
+    "name": "Anay Ahluwalia",
+    "rating": 5,
+    "speciality": [
+      "Corporate",
+      "Consumer Protection",
+      "Labor"
+    ],
+    "contact": "+91-9876543210",
+    "description": "Expert in corporate legal matters with over 20 years of experience in Supreme Court cases."
+  },
+  {
+    "name": "Arnav Dubey",
+    "rating": 2,
+    "speciality": [
+      "Criminal",
+      "Tax",
+      "Intellectual Property"
+    ],
+    "contact": "+91-8765432109",
+    "description": "Specializes in criminal and intellectual property law with a focus on small businesses."
+  },
+  {
+    "name": "Lavanya Lalla",
+    "rating": 5,
+    "speciality": [
+      "Civil",
+      "Human Rights",
+      "Family"
+    ],
+    "contact": "+91-7654321098",
+    "description": "Highly skilled in human rights and family law, providing compassionate and thorough service."
+  },
+  {
+    "name": "Armaan Khosla",
+    "rating": 2,
+    "speciality": [
+      "Real Estate",
+      "Media",
+      "Entertainment",
+      "Constitutional"
+    ],
+    "contact": "+91-6543210987",
+    "description": "Handles real estate and media law cases with a practical approach to resolving disputes."
+  },
+  {
+    "name": "Advik Chaudry",
+    "rating": 2,
+    "speciality": [
+      "Human Rights",
+      "Constitutional"
+    ],
+    "contact": "+91-5432109876",
+    "description": "Dedicated to protecting human rights and constitutional principles with precision."
+  },
+  {
+    "name": "Urvi Bedi",
+    "rating": 2,
+    "speciality": [
+      "Medical",
+      "Constitutional",
+      "Immigration"
+    ],
+    "contact": "+91-4321098765",
+    "description": "Immigration and constitutional law specialist, assisting small businesses effectively."
+  },
+  {
+    "name": "Rania Bansal",
+    "rating": 4,
+    "speciality": [
+      "Media",
+      "Entertainment",
+      "Labor",
+      "Civil"
+    ],
+    "contact": "+91-3210987654",
+    "description": "Known for expertise in media law and civil disputes with a high client satisfaction rate."
+  },
+  {
+    "name": "Siddharth Jain",
+    "rating": 3,
+    "speciality": [
+      "Corporate",
+      "Tax"
+    ],
+    "contact": "+91-2109876543",
+    "description": "Provides tailored legal solutions for corporate clients, focusing on tax compliance."
+  },
+  {
+    "name": "Pooja Verma",
+    "rating": 4.5,
+    "speciality": [
+      "Family",
+      "Property"
+    ],
+    "contact": "+91-1098765432",
+    "description": "Experienced in family and property law, ensuring seamless legal proceedings."
+  },
+  {
+    "name": "Rahul Kapoor",
+    "rating": 4.2,
+    "speciality": [
+      "Criminal",
+      "Civil"
+    ],
+    "contact": "+91-1234567890",
+    "description": "Passionate about representing clients in criminal and civil litigation."
+  },
+  {
+    "name": "Tanya Sharma",
+    "rating": 3.8,
+    "speciality": [
+      "Human Rights",
+      "Labor"
+    ],
+    "contact": "+91-1234509876",
+    "description": "Advocate for human rights with a focus on labor disputes and workplace rights."
+  },
+  {
+    "name": "Akshay Mehta",
+    "rating": 4.7,
+    "speciality": [
+      "Consumer Protection",
+      "Medical"
+    ],
+    "contact": "+91-9876504321",
+    "description": "Champion for consumer rights, especially in medical malpractice cases."
+  },
+  {
+    "name": "Divya Khanna",
+    "rating": 4.9,
+    "speciality": [
+      "Intellectual Property",
+      "Corporate"
+    ],
+    "contact": "+91-7894561230",
+    "description": "Intellectual property law specialist with significant corporate experience."
+  },
+  {
+    "name": "Manish Roy",
+    "rating": 4,
+    "speciality": [
+      "Tax",
+      "Constitutional"
+    ],
+    "contact": "+91-8529637410",
+    "description": "Provides expert advice on tax-related legal matters and constitutional law."
+  },
+  {
+    "name": "Nisha Gupta",
+    "rating": 5,
+    "speciality": [
+      "Immigration",
+      "Labor"
+    ],
+    "contact": "+91-9638527410",
+    "description": "Dedicated to helping clients with immigration laws and labor rights advocacy."
+  },
+  {
+    "name": "Amitabh Kulkarni",
+    "rating": 4.5,
+    "speciality": [
+      "Entertainment",
+      "Criminal"
+    ],
+    "contact": "+91-7418529630",
+    "description": "Known for resolving legal disputes in entertainment and criminal cases."
+  },
+  {
+    "name": "Sneha Nair",
+    "rating": 3.7,
+    "speciality": [
+      "Civil",
+      "Medical"
+    ],
+    "contact": "+91-6307418529",
+    "description": "Specializes in civil disputes and medical negligence cases."
+  },
+  {
+    "name": "Kabir Chatterjee",
+    "rating": 4.8,
+    "speciality": [
+      "Real Estate",
+      "Tax"
+    ],
+    "contact": "+91-1597534862",
+    "description": "Provides strategic legal solutions for real estate and tax issues."
+  },
+  {
+    "name": "Maya Desai",
+    "rating": 5,
+    "speciality": [
+      "Corporate",
+      "Human Rights"
+    ],
+    "contact": "+91-3579514862",
+    "description": "Fights for corporate accountability and human rights protections."
+  },
+  {
+    "name": "Arjun Singh",
+    "rating": 4.3,
+    "speciality": [
+      "Labor",
+      "Immigration"
+    ],
+    "contact": "+91-4567891230",
+    "description": "Helps workers and immigrants navigate complex legal challenges."
+  },
+  {
+    "id": 1734535823339,
+    "name": "Vansh garg",
+    "contact": "8295838991",
+    "speciality": [
+      "civil",
+      "criminal"
+    ],
+    "description": "lawyer"
+  },
+  {
+    "id": 1734583192288,
+    "name": "Vipul Aggarwal",
+    "contact": "8295838991",
+    "speciality": [
+      "Divorce"
+    ],
+    "description": "I have 5 years of experience in indian judiciary system"
+  },
+  {
+    "id": 1734584425584,
+    "name": "tushar",
+    "contact": "8295838991",
+    "speciality": [
+      "Divorce"
+    ],
+    "description": "i am divorce lawyer"
+  },
+  {
+    "id": 1734584463242,
+    "name": "tushar",
+    "contact": "8295838991",
+    "speciality": [
+      "Divorce"
+    ],
+    "description": "i am lawyer"
+  },
+  {
+    "id": 1734584532936,
+    "name": "Sahil",
+    "contact": "47747747747",
+    "speciality": [
+      "Labour"
+    ],
+    "description": "I am best layer",
+    "status": "rejected"
+  },
+  {
+    "id": 1734585032628,
+    "name": "Sahil",
+    "contact": "8765434567",
+    "speciality": [
+      "Real estate"
+    ],
+    "description": "i am property advisor and dealer and part time lawyer",
+    "status": "rejected"
+  },
+  {
+    "id": 1734585232054,
+    "name": "Yuvraj",
+    "contact": "7867564657",
+    "speciality": [
+      "Stock market"
+    ],
+    "description": "i am illegal nifty lawyer",
+    "status": "approved"
+  }
+]
