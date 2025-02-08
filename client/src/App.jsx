@@ -10,6 +10,7 @@ import Add from "./pages/add/Add";
 import Search from "./components/search/search";
 import BecomeALawyer from "./components/lawyer/BecomeALawyer";
 import AdminPage from "./components/admin/AdminPage";
+import PdfUploader from "./components/pdfAnalyzer/pdfUploader";
 import {
   QueryClient,
   QueryClientProvider,
@@ -43,6 +44,10 @@ function App() {
         {
           path: "/BecomeALawyer",
           element: <BecomeALawyer />,
+        },
+        {
+          path: "/PdfUploader",
+          element: <PdfUploader />,
         },
         {
           path: "/add",

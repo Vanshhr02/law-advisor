@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import newRequest from "../../utils/newRequest";
 import "./AdminPage.scss";
+
 const AdminPage = () => {
   const [lawyers, setLawyers] = useState([]);
   const [loginStatus, setLoginStatus] = useState(false);
   const [adminCredentials, setAdminCredentials] = useState({ username: '', password: '' });
 
   useEffect(() => {
-    // Fetch lawyers if logged in
     if (loginStatus) {
-      newRequest.get('/adminRouter/lawyers')
+      newRequest.get('/adminRouter/pending-lawyers')  // ✅ Corrected API endpoint
         .then(response => {
           setLawyers(response.data);
         })
@@ -33,15 +33,11 @@ const AdminPage = () => {
     }
   };
 
-  const handleApproval = (lawyerId, status) => {
-    newRequest.post('/adminRouter/approve-reject', { lawyerId, status })
+  const handleApproval = (lawyerId, action) => {
+    newRequest.patch('/adminRouter/approve-reject', { id: lawyerId, action }) // ✅ Fixed payload
       .then(response => {
-        alert(`Lawyer ${status}`);
-        setLawyers(prevLawyers => 
-          prevLawyers.map(lawyer => 
-            lawyer.id === lawyerId ? { ...lawyer, status } : lawyer
-          )
-        );
+        alert(`Lawyer ${action}d successfully`);
+        setLawyers(prevLawyers => prevLawyers.filter(lawyer => lawyer.id !== lawyerId));
       })
       .catch(error => {
         alert('Error updating lawyer status');
@@ -68,18 +64,22 @@ const AdminPage = () => {
         </div>
       ) : (
         <div className="lawyers-list">
-          <h2>Lawyer Applications</h2>
+          <h2>Pending Lawyer Applications</h2>
           <ul>
-            {lawyers.map((lawyer) => (
-              <li key={lawyer.id}>
-                <p>Name: {lawyer.name}</p>
-                <p>Contact: {lawyer.contact}</p>
-                <p>Speciality: {lawyer.speciality.join(', ')}</p>
-                <p>Status: {lawyer.status || 'Pending'}</p>
-                <button onClick={() => handleApproval(lawyer.id, 'approved')}>Approve</button>
-                <button onClick={() => handleApproval(lawyer.id, 'rejected')}>Reject</button>
-              </li>
-            ))}
+            {lawyers.length > 0 ? (
+              lawyers.map((lawyer) => (
+                <li key={lawyer.id}>
+                  <p>Name: {lawyer.name}</p>
+                  <p>Contact: {lawyer.contact}</p>
+                  <p>Speciality: {Array.isArray(lawyer.speciality) ? lawyer.speciality.join(', ') : lawyer.speciality}</p> 
+                  <p>Status: {lawyer.status}</p>
+                  <button onClick={() => handleApproval(lawyer.id, 'approve')}>Approve</button>
+                  <button onClick={() => handleApproval(lawyer.id, 'reject')}>Reject</button>
+                </li>
+              ))
+            ) : (
+              <p>No pending applications.</p>
+            )}
           </ul>
         </div>
       )}

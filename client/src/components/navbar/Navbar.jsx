@@ -56,6 +56,10 @@ function Navbar() {
           <span className="dot">.</span>
         </div>
         <div className="links">
+        <Link className="link" to="/PdfUploader">
+  Document Analyzer
+</Link>
+
           {!currentUser?.isSeller && (
             <span onClick={handleBecomeALawyer} className="clickable">
               Become a Lawyer

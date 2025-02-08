@@ -10,13 +10,21 @@ function Featured() {
   const [filteredResults, setFilteredResults] = useState([]);
   const navigate = useNavigate(); 
   // Handle search
-  const handleSearch = () => {
-    if (input.trim()) {
-      console.log(input);  
-      navigate(`/search?query=${encodeURIComponent(input)}`);
-        //console.log(input);
-    }
+//   const handleSearch = () => {
+//     if (input.trim()) {
+//       console.log(input);  
+//       navigate(`/search?query=${encodeURIComponent(input)}`);
+//         //console.log(input);
+//     }
+// };/
+const handleSearch = () => {
+  if (input.trim()) {
+    navigate(`/search?query=${encodeURIComponent(input)}`);
+  } else {
+    navigate("/search"); // Navigate even if input is empty
+  }
 };
+
   return (
     <div className="featured">
       <div className="container">
@@ -25,7 +33,7 @@ function Featured() {
             Find the perfect <span>Lawyer</span> for your Cases
           </h1>
           <div className="search">
-            <div className="searchInput">
+            {/* <div className="searchInput">
               <img src="./img/search.png" alt="Search Icon" />
               <input
                 type="text"
@@ -33,7 +41,7 @@ function Featured() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
               />
-            </div>
+            </div> */}
             
             <button onClick={handleSearch}>Search</button>
           </div>

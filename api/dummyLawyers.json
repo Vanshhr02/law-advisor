@@ -689,5 +689,26 @@
     ],
     "description": "i am illegal nifty lawyer",
     "status": "approved"
+  },
+  {
+    "id": 1738348808026,
+    "name": "sahil bhola",
+    "contact": "8295838991",
+    "speciality": [
+      "civil",
+      "criminal"
+    ],
+    "description": "i am lawyer",
+    "status": "approved"
+  },
+  {
+    "id": 1738567687221,
+    "name": "Vansh garg",
+    "contact": "8765434567",
+    "speciality": [
+      "civil"
+    ],
+    "description": "professional lawyer",
+    "status": "approved"
   }
 ]

@@ -10,6 +10,7 @@ const Search = () => {
 
   const handleSearch = async () => {
     if (input.trim()) {
+      console.log("Searching for:", input);
       try {
         const response = await newRequest.get(`/lawyers?query=${input}`);
         setResults(response.data);
@@ -41,27 +42,25 @@ const Search = () => {
         <button onClick={handleSearch}>Search</button>
       </div>
       <div className="results">
-        {results.length > 0 ? (
-          results.map((lawyer) => (
-            <div
-              className="card"
-              key={lawyer.id}
-              onClick={() => handleCardClick(lawyer)} 
-            >
-              <div className="cardHeader">
-                <h3>{lawyer.name}</h3>
-                <p>{lawyer.location}</p>
-              </div>
-              <div className="cardBody">
-                <p><strong>Speciality:</strong> {lawyer.speciality.join(", ")}</p>
-                <p><strong>Rating:</strong> {lawyer.rating}</p>
-              </div>
-            </div>
-          ))
-        ) : (
-          <p className="noResults">No results found. Try another search.</p>
-        )}
+  {results.length > 0 &&
+    results.map((lawyer) => (
+      <div
+        className="card"
+        key={lawyer.id}
+        onClick={() => handleCardClick(lawyer)}
+      >
+        <div className="cardHeader">
+          <h3>{lawyer.name}</h3>
+          <p>{lawyer.location}</p>
+        </div>
+        <div className="cardBody">
+          <p><strong>Speciality:</strong> {lawyer.speciality.join(", ")}</p>
+          <p><strong>Rating:</strong> {lawyer.rating}</p>
+        </div>
       </div>
+    ))}
+</div>
+
 
       {/* Modal for showing complete details */}
       {showModal && selectedLawyer && (

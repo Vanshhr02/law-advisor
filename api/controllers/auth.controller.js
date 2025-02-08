@@ -5,11 +5,16 @@ import jwt from "jsonwebtoken";
 
 export const register = async (req, res, next) => {
     try {
-        const userExists = await User.findOne({ username: req.body.username });
+        
+      const userExists = await User.findOne({ username: req.body.username });
+      const emailExists = await User.findOne({ email: req.body.email });
 if (userExists) {
     return res.status(400).json({ message: 'Username already taken' });
 }
-
+if (emailExists) {
+  console.log("email already exist")
+  return res.status(400).json({ message: 'email already exist' });
+}
       console.log("Request body:", req.body); // Debug request data
       const hash = bcrypt.hashSync(req.body.password, 5);
      // console.log("Hashed password:", hash); // Debug hashed password

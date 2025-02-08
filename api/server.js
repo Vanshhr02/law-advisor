@@ -7,6 +7,7 @@ import auth from "./routes/auth.route.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import lawyerrouter from "./routes/lawyer.route.js";
+import uploadRoute from "./routes/upload.route.js";
 import adminRouter from "./routes/adminRouter.js";
 import lawrouter from "./routes/lawyer.route.js";
 
@@ -32,6 +33,7 @@ app.use("/api/users", userRoute);
 app.use("/api/conversations", conversationRoute);
 app.use("/api/adminRouter", adminRouter);
 app.use("/api",lawrouter);
+app.use("/api",uploadRoute);
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
