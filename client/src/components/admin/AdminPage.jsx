@@ -9,7 +9,7 @@ const AdminPage = () => {
 
   useEffect(() => {
     if (loginStatus) {
-      newRequest.get('/adminRouter/pending-lawyers')  // ✅ Corrected API endpoint
+      newRequest.get('/adminRouter/pending-lawyers') 
         .then(response => {
           setLawyers(response.data);
         })
