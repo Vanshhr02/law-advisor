@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.scss";
 import Featured from "../../components/featured/Featured";
 import TrustedBy from "../../components/trustedBy/TrustedBy";
+import { Link } from "react-router-dom";
 // import Slide from "../../components/slide/Slide";
 // import CatCard from "../../components/catCard/CatCard";
 // import ProjectCard from "../../components/projectCard/ProjectCard";
@@ -54,7 +55,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="explore">
+      {/* <div className="explore">
         <div className="container">
           <h1>Explore the marketplace</h1>
           <div className="items">
@@ -141,7 +142,55 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+     <div className="explore">
+  <div className="container">
+    <h1>Explore the marketplace</h1>
+    <div className="items">
+      <Link to="/blog" className="item">
+        <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/graphics-design.d32a2f8.svg" alt="" />
+        <span>Criminal</span>
+      </Link>
+      <Link to="/blog" className="item">
+        <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/online-marketing.74e221b.svg" alt="" />
+        <span>Civil</span>
+      </Link>
+      <Link to="/blog" className="item">
+        <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/writing-translation.32ebe2e.svg" alt="" />
+        <span>Divorce</span>
+      </Link>
+      <Link to="/blog" className="item">
+        <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/video-animation.f0d9d71.svg" alt="" />
+        <span>Property</span>
+      </Link>
+      {/* <Link to="/blog" className="item">
+        <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/music-audio.320af20.svg" alt="" />
+        <span>Business</span>
+      </Link> */}
+      {/* <Link to="/blog" className="item">
+        <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/programming.9362366.svg" alt="" />
+        <span>Programming & Tech</span>
+      </Link> */}
+      {/* <Link to="/blog" className="item">
+        <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/business.bbdf319.svg" alt="" />
+        <span>Business</span>
+      </Link> */}
+      <Link to="/blog" className="item">
+        <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/lifestyle.745b575.svg" alt="" />
+        <span>constitutional</span>
+      </Link>
+      {/* <Link to="/blog" className="item">
+        <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/data.718910f.svg" alt="" />
+        <span>Data</span>
+      </Link> */}
+      {/* <Link to="/blog" className="item">
+        <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/photography.01cf943.svg" alt="" />
+        <span>Personal</span>
+      </Link> */}
+    </div>
+  </div>
+</div>
+
       <div className="features dark">
         <div className="container">
           <div className="item">

@@ -7,20 +7,22 @@
       margin: auto;
   
       input {
-        width: 100%;
+        display: grid;
+        width: 25vw;
         padding: 10px;
-        margin: 10px 0;
+        margin: 8px 0;
         border: 1px solid #ccc;
-        border-radius: 5px;
+        border-radius: 15px;
       }
   
       button {
-        width: 100%;
+        display: grid;
+        width: 26vw;
         padding: 10px;
         background-color: #4caf50;
         color: white;
         border: none;
-        border-radius: 5px;
+        border-radius: 15px;
         cursor: pointer;
   
         &:hover {

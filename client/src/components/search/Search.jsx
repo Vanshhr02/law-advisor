@@ -1,12 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Search.scss";
-import newRequest from "../../utils/newRequest"; 
+import newRequest from "../../utils/newRequest";
 
 const Search = () => {
   const [input, setInput] = useState("");
   const [results, setResults] = useState([]);
   const [selectedLawyer, setSelectedLawyer] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+  // Redirect to login page if not logged in
+  useEffect(() => {
+    if (!currentUser) {
+      navigate("/login");
+    }
+  }, [currentUser, navigate]);
 
   const handleSearch = async () => {
     if (input.trim()) {
@@ -21,8 +31,8 @@ const Search = () => {
   };
 
   const handleCardClick = (lawyer) => {
-    setSelectedLawyer(lawyer); 
-    setShowModal(true); 
+    setSelectedLawyer(lawyer);
+    setShowModal(true);
   };
 
   const closeModal = () => {
@@ -42,25 +52,24 @@ const Search = () => {
         <button onClick={handleSearch}>Search</button>
       </div>
       <div className="results">
-  {results.length > 0 &&
-    results.map((lawyer) => (
-      <div
-        className="card"
-        key={lawyer.id}
-        onClick={() => handleCardClick(lawyer)}
-      >
-        <div className="cardHeader">
-          <h3>{lawyer.name}</h3>
-          <p>{lawyer.location}</p>
-        </div>
-        <div className="cardBody">
-          <p><strong>Speciality:</strong> {lawyer.speciality.join(", ")}</p>
-          <p><strong>Rating:</strong> {lawyer.rating}</p>
-        </div>
+        {results.length > 0 &&
+          results.map((lawyer) => (
+            <div
+              className="card"
+              key={lawyer.id}
+              onClick={() => handleCardClick(lawyer)}
+            >
+              <div className="cardHeader">
+                <h3>{lawyer.name}</h3>
+                <p>{lawyer.location}</p>
+              </div>
+              <div className="cardBody">
+                <p><strong>Speciality:</strong> {lawyer.speciality.join(", ")}</p>
+                <p><strong>Rating:</strong> {lawyer.rating}</p>
+              </div>
+            </div>
+          ))}
       </div>
-    ))}
-</div>
-
 
       {/* Modal for showing complete details */}
       {showModal && selectedLawyer && (

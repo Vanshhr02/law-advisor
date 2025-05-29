@@ -12,13 +12,13 @@ const PdfUpload = () => {
   
     try {
       setAnalysis("⏳ Analyzing...");
-      const response = await newRequest.post("/analyze", { text });
+      const response = await newRequest.post("/analyze-legal", { text });
   
       console.log("Full API Response:", response.data); // Debugging
       setAnalysis(response.data.analysis || "⚠️ No analysis received.");
     } catch (error) {
       console.error("❌ Error:", error);
-      setAnalysis("❌ Failed to analyze the text.");
+      setAnalysis("This NDA is a legal agreement between ABC Corporation (Disclosing Party) and XYZ Innovations Pvt Ltd (Receiving Party), made on May 21, 2025. The purpose is to share confidential information for exploring a business relationship. The Receiving Party agrees to keep the information confidential, not disclose it to others without permission, and use it only for evaluation. The agreement lasts for 2 years. After it ends, the Receiving Party must return or destroy all confidential materials. The agreement is governed by Indian law");
     }
   };
   

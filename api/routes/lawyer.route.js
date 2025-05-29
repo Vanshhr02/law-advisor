@@ -1,3 +1,27 @@
+// import express from 'express';
+// import lawyers from "../models/lawyer.model";
+
+// lawrouter.get("/lawyers", async (req, res) => {
+//   try {
+//     const { query } = req.query;
+
+//     let lawyers;
+
+//     if (query) {
+//       // Case-insensitive search in speciality array
+//       lawyers = await lawyers.find({
+//         speciality: { $regex: new RegExp(query, "i") }
+//       });
+//     } else {
+//       lawyers = await lawyers.find();
+//     }
+
+//     res.status(200).json(lawyers);
+//   } catch (error) {
+//     console.error("Error fetching lawyers:", error);
+//     res.status(500).json({ message: "Error fetching lawyers from DB", error });
+//   }
+// });
 
 
 import express from "express";
@@ -37,45 +61,45 @@ lawrouter.get("/lawyers", (req, res) => {
   }
 });
 
-// // Route to register a new lawyer (POST request)
-// lawrouter.post("/register", (req, res) => {
-//   try {
-//     const { name, contact, speciality, description } = req.body;
+// Route to register a new lawyer (POST request)
+lawrouter.post("/register", (req, res) => {
+  try {
+    const { name, contact, speciality, description } = req.body;
 
-//     // Validate input data
-//     if (!name || !contact || !speciality || !description) {
-//       return res.status(400).json({ message: "All fields are required" });
-//     }
+    // Validate input data
+    if (!name || !contact || !speciality || !description) {
+      return res.status(400).json({ message: "All fields are required" });
+    }
 
-//     // Ensure speciality is an array
-//     if (!Array.isArray(speciality)) {
-//       return res.status(400).json({ message: "Speciality must be an array" });
-//     }
+    // Ensure speciality is an array
+    if (!Array.isArray(speciality)) {
+      return res.status(400).json({ message: "Speciality must be an array" });
+    }
 
-//     // Read the existing data
-//     const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    // Read the existing data
+    const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
-//     // Create a new lawyer object
-//     const newLawyer = {
-//       id: Date.now(),
-//       name,
-//       contact,
-//       speciality,
-//       description,
-//     };
+    // Create a new lawyer object
+    const newLawyer = {
+      id: Date.now(),
+      name,
+      contact,
+      speciality,
+      description,
+    };
 
-//     // Add the new lawyer to the array
-//     data.push(newLawyer);
+    // Add the new lawyer to the array
+    data.push(newLawyer);
 
-//     // Write the updated data back to the file
-//     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf8");
+    // Write the updated data back to the file
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf8");
 
-//     // Respond with success
-//     res.status(201).json({ message: "Lawyer registered successfully", lawyer: newLawyer });
-//   } catch (error) {
-//     console.error("Error adding lawyer:", error);
-//     res.status(500).json({ message: "Error adding lawyer to the database", error });
-//   }
-// });
+    // Respond with success
+    res.status(201).json({ message: "Lawyer registered successfully", lawyer: newLawyer });
+  } catch (error) {
+    console.error("Error adding lawyer:", error);
+    res.status(500).json({ message: "Error adding lawyer to the database", error });
+  }
+});
 
 export default lawrouter;

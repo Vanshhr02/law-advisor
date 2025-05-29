@@ -26,37 +26,91 @@
 //   }
 // };
 
+// import dotenv from "dotenv";
+// import { GoogleGenerativeAI } from "@google/generative-ai";
+// dotenv.config();
+
+// const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+
+// export const analyzeText = async (req, res) => {
+//   try {
+//     const { legalText, userQuery } = req.body;
+
+//     const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
+
+//     const prompt = `
+//       You are a legal AI assistant. Analyze the following legal document.
+      
+//       **User Query:** ${userQuery}
+      
+//       **Instructions:**
+//       - Identify legal obligations and rights.
+//       - Summarize key legal points.
+//       - Explain in simple terms.
+//       - Highlight potential risks or unusual clauses.
+      
+//       **Legal Document:**
+//       ${legalText}
+//     `;
+
+//     const result = await model.generateContent(prompt);
+    
+//     const responseText = result?.response?.text?.();
+    
+//     if (!responseText) {
+//       return res.status(500).json({ error: "AI did not return any analysis!" });
+//     }
+
+//     console.log("Generated Legal Analysis:", responseText);
+//     res.status(200).json({ analysis: responseText });
+
+//   } catch (error) {
+//     console.error("Error analyzing legal text:", error);
+//     res.status(500).json({ error: "Something went wrong!" });
+//   }
+// };
+
+
+import OpenAI from "openai";
 import dotenv from "dotenv";
-import { GoogleGenerativeAI } from "@google/generative-ai";
 dotenv.config();
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
 
 export const analyzeText = async (req, res) => {
   try {
     const { legalText, userQuery } = req.body;
 
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
+    if (!legalText || !userQuery) {
+      return res.status(400).json({ error: "Missing legal text or query" });
+    }
 
     const prompt = `
-      You are a legal AI assistant. Analyze the following legal document.
-      
-      **User Query:** ${userQuery}
-      
-      **Instructions:**
-      - Identify legal obligations and rights.
-      - Summarize key legal points.
-      - Explain in simple terms.
-      - Highlight potential risks or unusual clauses.
-      
-      **Legal Document:**
-      ${legalText}
-    `;
+You are a legal AI assistant. Analyze the following legal text and provide insights based on the user query.
 
-    const result = await model.generateContent(prompt);
-    
-    const responseText = result?.response?.text?.();
-    
+**User Query:** ${userQuery}
+
+**Instructions:**
+- Identify legal obligations and rights.
+- Summarize key legal points.
+- Explain in simple terms.
+- Highlight potential risks or unusual clauses.
+
+**Legal Document:**
+${legalText}
+`;
+
+    const chatCompletion = await openai.chat.completions.create({
+      model: "gpt-4", // or "gpt-3.5-turbo"
+      messages: [{ role: "user", content: prompt }],
+      temperature: 0.5,
+      max_tokens: 1000,
+    });
+
+    const responseText = chatCompletion.choices[0]?.message?.content?.trim();
+
     if (!responseText) {
       return res.status(500).json({ error: "AI did not return any analysis!" });
     }
@@ -65,7 +119,9 @@ export const analyzeText = async (req, res) => {
     res.status(200).json({ analysis: responseText });
 
   } catch (error) {
-    console.error("Error analyzing legal text:", error);
+    console.error("Error analyzing legal text:", error.message);
     res.status(500).json({ error: "Something went wrong!" });
   }
 };
+
+

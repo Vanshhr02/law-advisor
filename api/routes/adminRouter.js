@@ -14,15 +14,15 @@ const adminCredentials = {
   password: process.env.ADMIN_PASSWORD,
 };
 
-// Paths to JSON files
+
 const pendingFilePath = path.join(__dirname, "../pendingLawyers.json");
 const approvedFilePath = path.join(__dirname, "../dummyLawyers.json");
 
-// Ensure files exist
+
 if (!fs.existsSync(pendingFilePath)) fs.writeFileSync(pendingFilePath, "[]", "utf8");
 if (!fs.existsSync(approvedFilePath)) fs.writeFileSync(approvedFilePath, "[]", "utf8");
 
-// 1️⃣ Route to Submit a Lawyer for Approval (POST)
+
 adminRouter.post("/submit-lawyer", (req, res) => {
   try {
     const { name, contact, speciality, description } = req.body;
@@ -52,7 +52,7 @@ adminRouter.post("/submit-lawyer", (req, res) => {
   }
 });
 
-// 2️⃣ Route to Fetch Pending Lawyers (GET)
+
 adminRouter.get("/pending-lawyers", (req, res) => {
   try {
     const pendingLawyers = JSON.parse(fs.readFileSync(pendingFilePath, "utf8"));
@@ -63,7 +63,7 @@ adminRouter.get("/pending-lawyers", (req, res) => {
   }
 });
 
-// Admin login route
+
 adminRouter.post('/loginasadmin', (req, res) => {
   const { username, password } = req.body;
 
@@ -74,7 +74,7 @@ adminRouter.post('/loginasadmin', (req, res) => {
   }
 });
 
-// 3️⃣ Route to Approve/Reject a Lawyer (PATCH)
+
 adminRouter.patch("/approve-reject", (req, res) => {
   try {
     const { id, action } = req.body; // Expecting { id, action: "approve" or "reject" }
